@@ -46,14 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Frm_bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_bitacora.Designer.cs">
+      <DependentUpon>Frm_bitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_login.Designer.cs">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_mdi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_mdi.Designer.cs">
+      <DependentUpon>Frm_mdi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_bitacora.resx">
+      <DependentUpon>Frm_bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_mdi.resx">
+      <DependentUpon>Frm_mdi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
