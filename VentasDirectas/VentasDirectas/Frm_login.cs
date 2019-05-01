@@ -36,7 +36,7 @@ namespace VentasDirectas
         {
             try
             {
-                string seleccionarUsuario = string.Format("SELECT * FROM tbl_usuarios;");
+                string seleccionarUsuario = string.Format("SELECT * FROM tbl_usuario;");
                 OdbcCommand comm = new OdbcCommand(seleccionarUsuario, Conexion.nuevaConexion());
                 OdbcDataReader mostrar = comm.ExecuteReader();
 
