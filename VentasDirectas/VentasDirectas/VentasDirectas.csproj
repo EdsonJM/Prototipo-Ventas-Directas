@@ -65,11 +65,53 @@
     <Compile Include="Frm_mdi.Designer.cs">
       <DependentUpon>Frm_mdi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\Frm_consulta.cs">
+    <Compile Include="Mantenimientos\Frm_consultaCuentaContable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\Frm_consulta.Designer.cs">
-      <DependentUpon>Frm_consulta.cs</DependentUpon>
+    <Compile Include="Mantenimientos\Frm_consultaCuentaContable.Designer.cs">
+      <DependentUpon>Frm_consultaCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaEmpleado.Designer.cs">
+      <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaProducto.Designer.cs">
+      <DependentUpon>Frm_consultaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaProveedor.Designer.cs">
+      <DependentUpon>Frm_consultaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaSucursal.Designer.cs">
+      <DependentUpon>Frm_consultaSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaTipoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaTipoPago.Designer.cs">
+      <DependentUpon>Frm_consultaTipoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaTipoPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaTipoPuesto.Designer.cs">
+      <DependentUpon>Frm_consultaTipoPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_consultaGasto.Designer.cs">
+      <DependentUpon>Frm_consultaGasto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +124,29 @@
     <EmbeddedResource Include="Frm_mdi.resx">
       <DependentUpon>Frm_mdi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\Frm_consulta.resx">
-      <DependentUpon>Frm_consulta.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaCuentaContable.resx">
+      <DependentUpon>Frm_consultaCuentaContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaEmpleado.resx">
+      <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaProducto.resx">
+      <DependentUpon>Frm_consultaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaProveedor.resx">
+      <DependentUpon>Frm_consultaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaSucursal.resx">
+      <DependentUpon>Frm_consultaSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaTipoPago.resx">
+      <DependentUpon>Frm_consultaTipoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaTipoPuesto.resx">
+      <DependentUpon>Frm_consultaTipoPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_consultaGasto.resx">
+      <DependentUpon>Frm_consultaGasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

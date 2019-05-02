@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
-namespace VentasDirectas
+namespace VentasDirectas.Mantenimientos
 {
-    public partial class Frm_bitacora : Form
+    public partial class Frm_consultaTipoPuesto : Form
     {
-        public Frm_bitacora()
+        public Frm_consultaTipoPuesto()
         {
             InitializeComponent();
         }
@@ -32,14 +32,14 @@ namespace VentasDirectas
         {
             try
             {
-                string consultaMostrar = "SELECT * FROM tbl_bitacora;";
+                string consultaMostrar = "SELECT * FROM tbl_tipopuesto;";
                 OdbcCommand comm = new OdbcCommand(consultaMostrar, Conexion.nuevaConexion());
                 OdbcDataReader mostrarDatos = comm.ExecuteReader();
 
                 while (mostrarDatos.Read())
                 {
-                    Dgv_mostrarBitacora.Refresh();
-                    Dgv_mostrarBitacora.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2),
+                    Dgv_mostrarTipoPuesto.Refresh();
+                    Dgv_mostrarTipoPuesto.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2),
                         mostrarDatos.GetString(3), mostrarDatos.GetString(4));
                 }
 
@@ -50,40 +50,53 @@ namespace VentasDirectas
             }
         }
 
-        private void Frm_bitacora_Load(object sender, EventArgs e)
+        private void Frm_consultaTipoPuesto_Load(object sender, EventArgs e)
         {
-            MostrarConsulta();   
+            MostrarConsulta();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Btn_actualizar_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(Txt_buscar.Text.Trim())==false)
+            Dgv_mostrarTipoPuesto.Rows.Clear();
+            MostrarConsulta();
+        }
+
+        private void Btn_seleccionar_Click(object sender, EventArgs e)
+        {
+            if (Dgv_mostrarTipoPuesto.Rows.Count == 0)
             {
-                Dgv_mostrarBitacora.Rows.Clear();
+                return;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+        }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_buscar.Text.Trim()) == false)
+            {
+                Dgv_mostrarTipoPuesto.Rows.Clear();
                 try
                 {
-                    string consultaMostrar = "SELECT * FROM tbl_bitacora WHERE usuario LIKE ('%"+Txt_buscar.Text.Trim()+"%');";
+                    string consultaMostrar = "SELECT * FROM tbl_tipopuesto WHERE Nombre_Puesto LIKE ('%" + Txt_buscar.Text.Trim() + "%');";
                     OdbcCommand comm = new OdbcCommand(consultaMostrar, Conexion.nuevaConexion());
                     OdbcDataReader mostrarDatos = comm.ExecuteReader();
 
                     while (mostrarDatos.Read())
                     {
-                        Dgv_mostrarBitacora.Refresh();
-                        Dgv_mostrarBitacora.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2),
+                        Dgv_mostrarTipoPuesto.Refresh();
+                       Dgv_mostrarTipoPuesto.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2),
                             mostrarDatos.GetString(3), mostrarDatos.GetString(4));
                     }
                 }
-                catch(Exception err)
+                catch (Exception err)
                 {
-                    Console.WriteLine("ERROR:"+err.Message);
+                    Console.WriteLine("ERROR:" + err.Message);
                 }
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Dgv_mostrarBitacora.Rows.Clear();
-            MostrarConsulta();
         }
     }
 }
