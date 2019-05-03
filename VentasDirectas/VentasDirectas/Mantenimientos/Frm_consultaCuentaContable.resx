@@ -132,22 +132,18 @@
   <metadata name="saldoCuenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="codContable.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nombreCuenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="descripcionCuenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tipoCuenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="saldoCuenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Btn_minimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAASFJREFUWEftlzEuRGEURp9EMVqWISgkQsw2VLQkVkBCaGxCpWA6pWJmAdOITSgp
+        UCoI53s3kcnceSP+54rinuRkvjfFy5lG3Cr5IfO4GuQKdvBbFHGNH8G+4jHOYCMKecAdnPSrfsM1PMF3
+        3MWJLKCqt+uneC7x1qZnAxWzXD/Fc4jPNj1dVMxS/RSPYl5sejLGpidjbHoyxqYnY2x6MsamJ2NsejLG
+        pqcpZhEHeNfCC5zDUYpi9KJ7PG+h3jv+H2RRTA9vbBaj9+7b/KIo5gz1fVs3cZSimFncwr0WjoeIopgo
+        psboplGMPv8CHXGPNj06OXXpndZPseiSHKL+ZDSiWl16V3gQ5BEq5A3XsREV6+TUpfcUpM7nPk4NSf4p
+        VfUJCBrIRmRJCOgAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Btn_eliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -158,17 +154,6 @@
         IZx3woECTGOGf82p5NzhGpqEWUxojQzXUA4mManFWhJUHZNz1eQGVcUQwi0+56rJCaqK4aHHsyb38iXk
         UjZ7NsU+OEbq/SYL2IoxJkYyhj0NMbz+BWziHt3Qhy0nO73jftYWdpI3kntWFGrZ6Z3LvUZyyRPyIddl
         FIrZcrLTe2ok22dunsmQkX9K130DzhrC9zlK1s8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Btn_minimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAASFJREFUWEftlzEuRGEURp9EMVqWISgkQsw2VLQkVkBCaGxCpWA6pWJmAdOITSgp
-        UCoI53s3kcnceSP+54rinuRkvjfFy5lG3Cr5IfO4GuQKdvBbFHGNH8G+4jHOYCMKecAdnPSrfsM1PMF3
-        3MWJLKCqt+uneC7x1qZnAxWzXD/Fc4jPNj1dVMxS/RSPYl5sejLGpidjbHoyxqYnY2x6MsamJ2NsejLG
-        pqcpZhEHeNfCC5zDUYpi9KJ7PG+h3jv+H2RRTA9vbBaj9+7b/KIo5gz1fVs3cZSimFncwr0WjoeIopgo
-        psboplGMPv8CHXGPNj06OXXpndZPseiSHKL+ZDSiWl16V3gQ5BEq5A3XsREV6+TUpfcUpM7nPk4NSf4p
-        VfUJCBrIRmRJCOgAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

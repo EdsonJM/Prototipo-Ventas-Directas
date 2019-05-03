@@ -36,9 +36,9 @@
             this.tipoCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saldoCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.Btn_minimizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_minimizar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Lbl_nombre = new System.Windows.Forms.Label();
@@ -108,17 +108,15 @@
             this.panel1.Size = new System.Drawing.Size(800, 45);
             this.panel1.TabIndex = 1;
             // 
-            // Btn_eliminar
+            // label1
             // 
-            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_eliminar.Image")));
-            this.Btn_eliminar.Location = new System.Drawing.Point(743, 5);
-            this.Btn_eliminar.Name = "Btn_eliminar";
-            this.Btn_eliminar.Size = new System.Drawing.Size(35, 35);
-            this.Btn_eliminar.TabIndex = 10;
-            this.Btn_eliminar.UseVisualStyleBackColor = true;
-            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(324, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "CONSULTA CUENTAS CONTABLES";
             // 
             // Btn_minimizar
             // 
@@ -132,15 +130,17 @@
             this.Btn_minimizar.UseVisualStyleBackColor = true;
             this.Btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
             // 
-            // label1
+            // Btn_eliminar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 23);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "CONSULTA CUENTAS CONTABLES";
+            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_eliminar.Image")));
+            this.Btn_eliminar.Location = new System.Drawing.Point(743, 5);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(35, 35);
+            this.Btn_eliminar.TabIndex = 10;
+            this.Btn_eliminar.UseVisualStyleBackColor = true;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_seleccionar
             // 
@@ -221,8 +221,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView Dgv_mostrarCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn codContable;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionCuenta;
@@ -237,5 +235,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         private System.Windows.Forms.TextBox Txt_buscar;
         public System.Windows.Forms.Button Btn_buscar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarCuenta;
     }
 }

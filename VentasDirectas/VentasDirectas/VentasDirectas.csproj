@@ -113,6 +113,18 @@
     <Compile Include="Mantenimientos\Frm_consultaGasto.Designer.cs">
       <DependentUpon>Frm_consultaGasto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_mantCuentaContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantCuentaContable.Designer.cs">
+      <DependentUpon>Frm_mantCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantEmpleado.Designer.cs">
+      <DependentUpon>Frm_mantEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_bitacora.resx">
@@ -147,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_consultaGasto.resx">
       <DependentUpon>Frm_consultaGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantCuentaContable.resx">
+      <DependentUpon>Frm_mantCuentaContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantEmpleado.resx">
+      <DependentUpon>Frm_mantEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

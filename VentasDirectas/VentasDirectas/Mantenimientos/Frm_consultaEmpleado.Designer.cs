@@ -276,8 +276,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView Dgv_mostrarEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn codEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTipoPuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn primerNombreEmpleado;
@@ -300,5 +298,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         public System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.Button Btn_actualizar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarEmpleado;
     }
 }

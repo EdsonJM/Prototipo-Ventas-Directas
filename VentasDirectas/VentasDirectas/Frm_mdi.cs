@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using VentasDirectas.Mantenimientos;
 
 namespace VentasDirectas
 {
@@ -96,6 +97,52 @@ namespace VentasDirectas
             else
             {
                 bitacora.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaCuentaContable = false;
+        Frm_mantCuentaContable cuentaContable = new Frm_mantCuentaContable("");
+        private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantCuentaContable);
+            if (ventanaCuentaContable == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    cuentaContable = new Frm_mantCuentaContable(usuario);
+                }
+
+                cuentaContable.MdiParent = this;
+                cuentaContable.Show();
+                Application.DoEvents();
+                ventanaCuentaContable = true;
+            }
+            else
+            {
+                cuentaContable.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaEmpleado = false;
+        Frm_mantEmpleado empleado = new Frm_mantEmpleado("");
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantEmpleado);
+            if (ventanaEmpleado == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    empleado = new Frm_mantEmpleado(usuario);
+                }
+
+                empleado.MdiParent = this;
+                empleado.Show();
+                Application.DoEvents();
+                ventanaEmpleado = true;
+            }
+            else
+            {
+                empleado.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }
