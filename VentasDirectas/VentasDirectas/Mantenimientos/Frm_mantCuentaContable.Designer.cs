@@ -54,6 +54,7 @@
             // 
             // Btn_ingresar
             // 
+            this.Btn_ingresar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_ingresar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.Image")));
@@ -64,11 +65,12 @@
             this.Btn_ingresar.TabIndex = 0;
             this.Btn_ingresar.Text = "Ingresar";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_ingresar.UseVisualStyleBackColor = true;
+            this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_editar
             // 
+            this.Btn_editar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_editar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_editar.Image")));
@@ -79,11 +81,12 @@
             this.Btn_editar.TabIndex = 1;
             this.Btn_editar.Text = "Editar";
             this.Btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_editar.UseVisualStyleBackColor = true;
+            this.Btn_editar.UseVisualStyleBackColor = false;
             this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
             // 
             // Btn_guardar
             // 
+            this.Btn_guardar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_guardar.Image")));
@@ -94,11 +97,12 @@
             this.Btn_guardar.TabIndex = 2;
             this.Btn_guardar.Text = "Guardar";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.UseVisualStyleBackColor = false;
             this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // Btn_cancelar
             // 
+            this.Btn_cancelar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_cancelar.Image")));
@@ -109,11 +113,12 @@
             this.Btn_cancelar.TabIndex = 3;
             this.Btn_cancelar.Text = "Cancelar";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.UseVisualStyleBackColor = false;
             this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_borrar
             // 
+            this.Btn_borrar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_borrar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_borrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_borrar.Image")));
@@ -124,11 +129,12 @@
             this.Btn_borrar.TabIndex = 4;
             this.Btn_borrar.Text = "Borrar";
             this.Btn_borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_borrar.UseVisualStyleBackColor = true;
+            this.Btn_borrar.UseVisualStyleBackColor = false;
             this.Btn_borrar.Click += new System.EventHandler(this.Btn_borrar_Click);
             // 
             // Btn_consultar
             // 
+            this.Btn_consultar.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_consultar.Font = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_consultar.Image")));
@@ -139,7 +145,7 @@
             this.Btn_consultar.TabIndex = 5;
             this.Btn_consultar.Text = "Consultar";
             this.Btn_consultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Btn_consultar.UseVisualStyleBackColor = true;
+            this.Btn_consultar.UseVisualStyleBackColor = false;
             this.Btn_consultar.Click += new System.EventHandler(this.Btn_consultar_Click);
             // 
             // label1

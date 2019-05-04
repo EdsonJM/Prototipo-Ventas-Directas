@@ -239,7 +239,6 @@
         private System.Windows.Forms.Button Btn_minimizar;
         private System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Dgv_mostrarProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn telProveedor;
@@ -252,5 +251,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         public System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.Button Btn_actualizar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarProveedor;
     }
 }

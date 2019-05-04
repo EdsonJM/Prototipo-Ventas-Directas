@@ -204,7 +204,6 @@
         private System.Windows.Forms.Button Btn_minimizar;
         private System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Dgv_mostrarTipoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn codPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomTipoPago;
         public System.Windows.Forms.Button Btn_buscar;
@@ -212,5 +211,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         public System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.Button Btn_actualizar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarTipoPago;
     }
 }

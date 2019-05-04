@@ -187,7 +187,7 @@
             this.Btn_actualizar.UseVisualStyleBackColor = true;
             this.Btn_actualizar.Click += new System.EventHandler(this.Btn_actualizar_Click);
             // 
-            // Tbl_consultaGasto
+            // Frm_consultaGasto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +200,7 @@
             this.Controls.Add(this.Dgv_mostrarGastos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Tbl_consultaGasto";
+            this.Name = "Frm_consultaGasto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tbl_consultaGasto";
             this.Load += new System.EventHandler(this.Tbl_consultaGasto_Load);
@@ -218,7 +218,6 @@
         private System.Windows.Forms.Button Btn_minimizar;
         private System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Dgv_mostrarGastos;
         private System.Windows.Forms.DataGridViewTextBoxColumn codGasto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomGasto;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaGasto;
@@ -228,5 +227,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         public System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.Button Btn_actualizar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarGastos;
     }
 }

@@ -145,5 +145,143 @@ namespace VentasDirectas
                 empleado.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
+
+        bool ventanaGasto = false;
+        Frm_mantGastos gasto = new Frm_mantGastos("");
+        private void gastosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantGastos);
+            if (ventanaGasto == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    gasto = new Frm_mantGastos(usuario);
+                }
+
+                gasto.MdiParent = this;
+                gasto.Show();
+                Application.DoEvents();
+                ventanaGasto = true;
+            }
+            else
+            {
+                gasto.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaProducto = false;
+        Frm_mantProducto producto = new Frm_mantProducto("");
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantProducto);
+            if (ventanaProducto == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    producto = new Frm_mantProducto(usuario);
+                }
+
+                producto.MdiParent = this;
+                producto.Show();
+                Application.DoEvents();
+                ventanaProducto = true;
+            }
+            else
+            {
+                producto.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaProveedor = false;
+        Frm_mantProveedor proveedor = new Frm_mantProveedor("");
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantProveedor);
+            if (ventanaProveedor == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    proveedor = new Frm_mantProveedor(usuario);
+                }
+
+                proveedor.MdiParent = this;
+                proveedor.Show();
+                Application.DoEvents();
+                ventanaProveedor = true;
+            }
+            else
+            {
+                proveedor.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaSucursal = false;
+        Frm_mantSucursal sucursal = new Frm_mantSucursal("");
+        private void sucursalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantSucursal);
+            if (ventanaSucursal == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    sucursal = new Frm_mantSucursal(usuario);
+                }
+
+                sucursal.MdiParent = this;
+                sucursal.Show();
+                Application.DoEvents();
+                ventanaSucursal = true;
+            }
+            else
+            {
+                sucursal.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaTipoPago = false;
+        Frm_mantTipoPago tipoPago = new Frm_mantTipoPago("");
+        private void tipoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantTipoPago);
+            if (ventanaTipoPago == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    tipoPago = new Frm_mantTipoPago(usuario);
+                }
+
+                tipoPago.MdiParent = this;
+                tipoPago.Show();
+                Application.DoEvents();
+                ventanaTipoPago = true;
+            }
+            else
+            {
+                tipoPago.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaTipoPuesto = false;
+        Frm_mantTipoPuesto tipoPuesto = new Frm_mantTipoPuesto("");
+        private void tipoDePuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_mantTipoPuesto);
+            if (ventanaTipoPuesto == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    tipoPuesto = new Frm_mantTipoPuesto(usuario);
+                }
+
+                tipoPuesto.MdiParent = this;
+                tipoPuesto.Show();
+                Application.DoEvents();
+                ventanaTipoPuesto = true;
+            }
+            else
+            {
+                tipoPuesto.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
     }
 }

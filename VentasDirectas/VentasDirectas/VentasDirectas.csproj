@@ -125,6 +125,42 @@
     <Compile Include="Mantenimientos\Frm_mantEmpleado.Designer.cs">
       <DependentUpon>Frm_mantEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_mantGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantGastos.Designer.cs">
+      <DependentUpon>Frm_mantGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantProducto.Designer.cs">
+      <DependentUpon>Frm_mantProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantProveedor.Designer.cs">
+      <DependentUpon>Frm_mantProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantSucursal.Designer.cs">
+      <DependentUpon>Frm_mantSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantTipoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantTipoPago.Designer.cs">
+      <DependentUpon>Frm_mantTipoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantTipoPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_mantTipoPuesto.Designer.cs">
+      <DependentUpon>Frm_mantTipoPuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_bitacora.resx">
@@ -165,6 +201,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_mantEmpleado.resx">
       <DependentUpon>Frm_mantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantGastos.resx">
+      <DependentUpon>Frm_mantGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantProducto.resx">
+      <DependentUpon>Frm_mantProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantProveedor.resx">
+      <DependentUpon>Frm_mantProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantSucursal.resx">
+      <DependentUpon>Frm_mantSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantTipoPago.resx">
+      <DependentUpon>Frm_mantTipoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_mantTipoPuesto.resx">
+      <DependentUpon>Frm_mantTipoPuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

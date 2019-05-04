@@ -11,19 +11,18 @@ using System.Data.Odbc;
 
 namespace VentasDirectas.Mantenimientos
 {
-    public partial class Frm_mantCuentaContable : Form
+    public partial class Frm_mantSucursal : Form
     {
         string usuario = " ";
         DateTime fecha = DateTime.Now;
         bool presionado = false;
 
-        string codigoCuenta = " ";
-        string nomCuenta = " ";
-        string descCuenta = " ";
-        string tipoCuenta = " ";
-        string saldoCuenta = " ";
+        string codSucursal = "";
+        string nomSucursal = "";
+        string dirSucursal = "";
+        string telSucursal = "";
 
-        public Frm_mantCuentaContable(string usuario)
+        public Frm_mantSucursal(string usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
@@ -41,11 +40,18 @@ namespace VentasDirectas.Mantenimientos
 
         private void DeshabilitarCampos()
         {
-            Txt_codCuenta.Enabled = false;
-            Txt_nombreCuenta.Enabled = false;
-            Txt_descCuenta.Enabled = false;
-            Txt_tipoCuenta.Enabled = false;
-            Txt_saldoCuenta.Enabled = false;
+            Txt_codSucursal.Enabled = false;
+            Txt_nombreSucursal.Enabled = false;
+            Txt_telSucursal.Enabled = false;
+            Txt_dirSucursal.Enabled = false;
+        }
+
+        private void HabilitarCampos()
+        {
+            Txt_codSucursal.Enabled = true;
+            Txt_nombreSucursal.Enabled = true;
+            Txt_telSucursal.Enabled = true;
+            Txt_dirSucursal.Enabled = true;
         }
 
         private void DeshabilitarBtn()
@@ -55,15 +61,6 @@ namespace VentasDirectas.Mantenimientos
             Btn_guardar.Enabled = false;
             Btn_borrar.Enabled = false;
             Btn_consultar.Enabled = false;
-        }
-
-        private void HabilitarCampos()
-        {
-            Txt_codCuenta.Enabled = true;
-            Txt_nombreCuenta.Enabled = true;
-            Txt_descCuenta.Enabled = true;
-            Txt_tipoCuenta.Enabled = true;
-            Txt_saldoCuenta.Enabled = true;
         }
 
         private void HabilitarBtn()
@@ -77,155 +74,90 @@ namespace VentasDirectas.Mantenimientos
 
         private void Limpiar()
         {
-            Txt_codCuenta.Text = "";
-            Txt_nombreCuenta.Text = "";
-            Txt_descCuenta.Text = "";
-            Txt_tipoCuenta.Text = "";
-            Txt_saldoCuenta.Text = "";
+            Txt_codSucursal.Text = "";
+            Txt_nombreSucursal.Text = "";
+            Txt_telSucursal.Text = "";
+            Txt_dirSucursal.Text = "";
         }
 
-        private void Frm_mantCuentaContable_Load(object sender, EventArgs e)
+        private void Frm_mantSucursal_Load(object sender, EventArgs e)
         {
             DeshabilitarCampos();
         }
 
-        private void Btn_ingresar_Click(object sender, EventArgs e)
-        {
-            HabilitarCampos();
-        }
-
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            if(presionado == false)
+            if (presionado == false)
             {
                 DeshabilitarBtn();
                 Btn_consultar.Enabled = true;
                 presionado = true;
-            }else
+            }
+            else
             {
-                Frm_consultaCuentaContable conCuentaContable = new Frm_consultaCuentaContable();
-                conCuentaContable.ShowDialog();
+                Frm_consultaSucursal conSucursal = new Frm_consultaSucursal();
+                conSucursal.ShowDialog();
 
-                if(conCuentaContable.DialogResult == DialogResult.OK)
+                if (conSucursal.DialogResult == DialogResult.OK)
                 {
-                    Txt_codCuenta.Text = 
-                        conCuentaContable.Dgv_mostrarCuenta.Rows[conCuentaContable.Dgv_mostrarCuenta.CurrentRow.Index].
+                    Txt_codSucursal.Text =
+                        conSucursal.Dgv_mostrarSucursal.Rows[conSucursal.Dgv_mostrarSucursal.CurrentRow.Index].
                         Cells[0].Value.ToString();
 
-                    Txt_nombreCuenta.Text = conCuentaContable.Dgv_mostrarCuenta.Rows[conCuentaContable.Dgv_mostrarCuenta.CurrentRow.Index].
+                    Txt_nombreSucursal.Text = conSucursal.Dgv_mostrarSucursal.Rows[conSucursal.Dgv_mostrarSucursal.CurrentRow.Index].
                         Cells[1].Value.ToString();
 
-                    Txt_descCuenta.Text = conCuentaContable.Dgv_mostrarCuenta.Rows[conCuentaContable.Dgv_mostrarCuenta.CurrentRow.Index].
+                    Txt_dirSucursal.Text = conSucursal.Dgv_mostrarSucursal.Rows[conSucursal.Dgv_mostrarSucursal.CurrentRow.Index].
                         Cells[2].Value.ToString();
 
-                    Txt_tipoCuenta.Text = conCuentaContable.Dgv_mostrarCuenta.Rows[conCuentaContable.Dgv_mostrarCuenta.CurrentRow.Index].
+                    Txt_telSucursal.Text = conSucursal.Dgv_mostrarSucursal.Rows[conSucursal.Dgv_mostrarSucursal.CurrentRow.Index].
                         Cells[3].Value.ToString();
 
-                    Txt_saldoCuenta.Text = conCuentaContable.Dgv_mostrarCuenta.Rows[conCuentaContable.Dgv_mostrarCuenta.CurrentRow.Index].
-                        Cells[4].Value.ToString();
-
-                    Txt_codCuenta.Focus();
+                    Txt_codSucursal.Focus();
                     presionado = false;
                     HabilitarBtn();
                 }
             }
         }
 
-        private void ActualizarDatos()
+        private void BorrarDatos()
         {
-            codigoCuenta = Txt_codCuenta.Text;
-            nomCuenta = Txt_nombreCuenta.Text;
-            descCuenta = Txt_descCuenta.Text;
-            tipoCuenta = Txt_tipoCuenta.Text;
-            saldoCuenta = Txt_saldoCuenta.Text;
+            codSucursal = Txt_codSucursal.Text;
 
             try
             {
-                string consulta = "UPDATE `catalogo_cuentas_contables` SET `Cod_Contable` = '" + codigoCuenta + "',`Nombre_CuentaContable` = '" + nomCuenta + "', `Descripcion` = '" + descCuenta + "', `Tipo_Activo-Pasivo` = " + tipoCuenta + ", `Saldo` = " + saldoCuenta +" WHERE Cod_Contable = " + codigoCuenta;
-
+                string consulta = "DELETE FROM `tbl_sucursal` WHERE `Cod_Sucursal` = " + codSucursal;
                 OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
                 comm.ExecuteNonQuery();
-                MessageBox.Show("Registro actualizado correctamente");
+                MessageBox.Show("Registro eliminado correctamente");
 
                 OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
                 comm1.CommandType = CommandType.StoredProcedure;
-                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ACTUALIZACIÓN DE REGISTRO";
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ELIMINACIÓN DE REGISTRO";
                 comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
                 comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "CUENTAS CONTABLES";
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "SUCURSALES";
                 comm1.ExecuteNonQuery();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Console.WriteLine(err.Message);
-                MessageBox.Show("Error al intentar actualizar el registro");
+                MessageBox.Show("Error al intentar borrar el registro");
             }
-            
         }
 
-        private void Btn_editar_Click(object sender, EventArgs e)
+        private void Btn_borrar_Click(object sender, EventArgs e)
         {
-            if(presionado == false)
+            if (presionado == false)
             {
                 DeshabilitarBtn();
-                Btn_editar.Enabled = true;
-                presionado = true;
-                Txt_codCuenta.Enabled = false;
-            }
-            else
-            {
-                ActualizarDatos();
-                Txt_codCuenta.Focus();
-                presionado = false;
-                DeshabilitarCampos();
-                HabilitarBtn();
-                Limpiar();
-            }
-        }
-
-        private void GuardarDatos()
-        {
-            codigoCuenta = Txt_codCuenta.Text;
-            nomCuenta = Txt_nombreCuenta.Text;
-            descCuenta = Txt_descCuenta.Text;
-            tipoCuenta = Txt_tipoCuenta.Text;
-            saldoCuenta = Txt_saldoCuenta.Text;
-
-            try
-            {
-                string consulta = "INSERT INTO `catalogo_cuentas_contables` (`Cod_Contable`,`Nombre_CuentaContable`,`Descripcion`,`Tipo_Activo-Pasivo`,`Saldo`) VALUES ('" + codigoCuenta + "', '" + nomCuenta + "', '" + descCuenta + "', '" + tipoCuenta + "', '" + saldoCuenta + "')";
-                OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado correctamente");
-
-                OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
-                comm1.CommandType = CommandType.StoredProcedure;
-                comm1.Parameters.Add("ope", OdbcType.Text).Value = "NUEVO REGISTRO";
-                comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
-                comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "CUENTAS CONTABLES";
-                comm1.ExecuteNonQuery();
-            }
-            catch(Exception err)
-            {
-                Console.WriteLine(err.Message);
-                MessageBox.Show("Error al intentar guardar el registro");
-            }
-
-        }
-
-        private void Btn_guardar_Click(object sender, EventArgs e)
-        {
-            if(presionado == false)
-            {
-                DeshabilitarBtn();
-                Btn_guardar.Enabled = true;
+                Btn_borrar.Enabled = true;
                 presionado = true;
             }
             else
             {
-                GuardarDatos();
-                Txt_codCuenta.Focus();
+                BorrarDatos();
+                Txt_codSucursal.Focus();
                 presionado = false;
                 DeshabilitarCampos();
                 HabilitarBtn();
@@ -240,50 +172,107 @@ namespace VentasDirectas.Mantenimientos
             HabilitarBtn();
         }
 
-        private void BorrarDatos()
+        private void GuardarDatos()
         {
-            codigoCuenta = Txt_codCuenta.Text;
+            codSucursal = Txt_codSucursal.Text;
+            nomSucursal = Txt_nombreSucursal.Text;
+            dirSucursal = Txt_dirSucursal.Text;
+            telSucursal = Txt_telSucursal.Text;
 
             try
             {
-                string consulta = "DELETE FROM `catalogo_cuentas_contables` WHERE `Cod_Contable` = " + codigoCuenta;
+                string consulta = "INSERT INTO `tbl_sucursal` VALUES ('" + codSucursal + "', '" + nomSucursal + "', '" + dirSucursal + "', '" + telSucursal + "')";
                 OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
                 comm.ExecuteNonQuery();
-                MessageBox.Show("Registro eliminado correctamente");
+                MessageBox.Show("Registro guardado correctamente");
 
                 OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
                 comm1.CommandType = CommandType.StoredProcedure;
-                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ELIMINACIÓN DE REGISTRO";
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "NUEVO REGISTRO";
                 comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
                 comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "CUENTAS CONTABLES";
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "SUCURSALES";
                 comm1.ExecuteNonQuery();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Console.WriteLine(err.Message);
-                MessageBox.Show("Error al intentar borrar el registro");
+                MessageBox.Show("Error al intentar guardar el registro");
             }
-
         }
 
-        private void Btn_borrar_Click(object sender, EventArgs e)
+        private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            if(presionado == false)
+            if (presionado == false)
             {
                 DeshabilitarBtn();
-                Btn_borrar.Enabled = true;
+                Btn_guardar.Enabled = true;
                 presionado = true;
             }
             else
             {
-                BorrarDatos();
-                Txt_codCuenta.Focus();
+                GuardarDatos();
+                Txt_codSucursal.Focus();
                 presionado = false;
                 DeshabilitarCampos();
                 HabilitarBtn();
                 Limpiar();
             }
+        }
+
+        private void ActualizarDatos()
+        {
+            codSucursal = Txt_codSucursal.Text;
+            nomSucursal = Txt_nombreSucursal.Text;
+            dirSucursal = Txt_dirSucursal.Text;
+            telSucursal = Txt_telSucursal.Text;
+
+            try
+            {
+                string consulta = "UPDATE `tbl_sucursal` SET `Cod_Sucursal` = '" + codSucursal + "',`Nombre_Sucursal` = '" + nomSucursal + "', `Direccion_Sucursal` = '" + dirSucursal + "', `Telefono_Sucursal` = " + telSucursal + " WHERE Cod_Sucursal = " + codSucursal;
+
+                OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Registro actualizado correctamente");
+
+                OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
+                comm1.CommandType = CommandType.StoredProcedure;
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ACTUALIZACIÓN DE REGISTRO";
+                comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
+                comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "SUCURSALES";
+                comm1.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                MessageBox.Show("Error al intentar actualizar el registro");
+            }
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            if (presionado == false)
+            {
+                DeshabilitarBtn();
+                Btn_editar.Enabled = true;
+                presionado = true;
+                Txt_codSucursal.Enabled = false;
+            }
+            else
+            {
+                ActualizarDatos();
+                Txt_codSucursal.Focus();
+                presionado = false;
+                DeshabilitarCampos();
+                HabilitarBtn();
+                Limpiar();
+            }
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos();
         }
     }
 }

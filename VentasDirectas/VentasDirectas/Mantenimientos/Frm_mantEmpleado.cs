@@ -173,6 +173,14 @@ namespace VentasDirectas.Mantenimientos
                 OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Registro actualizado correctamente");
+
+                OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
+                comm1.CommandType = CommandType.StoredProcedure;
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ACTUALIZACIÓN DE REGISTRO";
+                comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
+                comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
+                comm1.ExecuteNonQuery();
             }
             catch(Exception err)
             {
@@ -180,20 +188,6 @@ namespace VentasDirectas.Mantenimientos
                 MessageBox.Show("Error al intentar actualizar el registro");
             }
 
-            try
-            {
-                OdbcCommand comm = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
-                comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.Add("ope", OdbcType.Text).Value = "ACTUALIZACIÓN DE REGISTRO";
-                comm.Parameters.Add("usr", OdbcType.Text).Value = usuario;
-                comm.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
-                comm.ExecuteNonQuery();
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-            }
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -313,6 +307,14 @@ namespace VentasDirectas.Mantenimientos
                 OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Registro guardado correctamente");
+
+                OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
+                comm1.CommandType = CommandType.StoredProcedure;
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "NUEVO REGISTRO";
+                comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
+                comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
+                comm1.ExecuteNonQuery();
             }
             catch (Exception err)
             {
@@ -320,20 +322,6 @@ namespace VentasDirectas.Mantenimientos
                 MessageBox.Show("Error al intentar guardar el registro");
             }
 
-            try
-            {
-                OdbcCommand comm = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
-                comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.Add("ope", OdbcType.Text).Value = "NUEVO REGISTRO";
-                comm.Parameters.Add("usr", OdbcType.Text).Value = usuario;
-                comm.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
-                comm.ExecuteNonQuery();
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-            }
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
@@ -372,6 +360,14 @@ namespace VentasDirectas.Mantenimientos
                 OdbcCommand comm = new OdbcCommand(consulta, Conexion.nuevaConexion());
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Registro eliminado correctamente");
+
+                OdbcCommand comm1 = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
+                comm1.CommandType = CommandType.StoredProcedure;
+                comm1.Parameters.Add("ope", OdbcType.Text).Value = "ELIMINACIÓN DE REGISTRO";
+                comm1.Parameters.Add("usr", OdbcType.Text).Value = usuario;
+                comm1.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
+                comm1.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
+                comm1.ExecuteNonQuery();
             }
             catch (Exception err)
             {
@@ -379,20 +375,6 @@ namespace VentasDirectas.Mantenimientos
                 MessageBox.Show("Error al intentar borrar el registro");
             }
 
-            try
-            {
-                OdbcCommand comm = new OdbcCommand("{call SP_InsertarBitacora(?,?,?,?)}", Conexion.nuevaConexion());
-                comm.CommandType = CommandType.StoredProcedure;
-                comm.Parameters.Add("ope", OdbcType.Text).Value = "ELIMINACIÓN DE REGISTRO";
-                comm.Parameters.Add("usr", OdbcType.Text).Value = usuario;
-                comm.Parameters.Add("fecha", OdbcType.Text).Value = fecha.ToString("yyyy/MM/dd HH:mm:ss");
-                comm.Parameters.Add("tbl", OdbcType.Text).Value = "EMPLEADOS";
-                comm.ExecuteNonQuery();
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-            }
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)

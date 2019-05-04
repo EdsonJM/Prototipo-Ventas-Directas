@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_consultaProducto));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.Btn_minimizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_minimizar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.Btn_buscar = new System.Windows.Forms.Button();
@@ -66,17 +66,15 @@
             this.panel1.Size = new System.Drawing.Size(1100, 45);
             this.panel1.TabIndex = 0;
             // 
-            // Btn_eliminar
+            // label1
             // 
-            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_eliminar.Image")));
-            this.Btn_eliminar.Location = new System.Drawing.Point(1035, 5);
-            this.Btn_eliminar.Name = "Btn_eliminar";
-            this.Btn_eliminar.Size = new System.Drawing.Size(35, 35);
-            this.Btn_eliminar.TabIndex = 5;
-            this.Btn_eliminar.UseVisualStyleBackColor = true;
-            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 23);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "CONSULTA PRODUCTO";
             // 
             // Btn_minimizar
             // 
@@ -90,15 +88,17 @@
             this.Btn_minimizar.UseVisualStyleBackColor = true;
             this.Btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
             // 
-            // label1
+            // Btn_eliminar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 23);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "CONSULTA PRODUCTO";
+            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_eliminar.Image")));
+            this.Btn_eliminar.Location = new System.Drawing.Point(1035, 5);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(35, 35);
+            this.Btn_eliminar.TabIndex = 5;
+            this.Btn_eliminar.UseVisualStyleBackColor = true;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Lbl_nombre
             // 
@@ -266,7 +266,6 @@
         private System.Windows.Forms.Label Lbl_nombre;
         private System.Windows.Forms.TextBox Txt_buscar;
         public System.Windows.Forms.Button Btn_buscar;
-        private System.Windows.Forms.DataGridView Dgv_mostrarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProv;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomProd;
@@ -279,5 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn existenciaProd;
         public System.Windows.Forms.Button Btn_seleccionar;
         public System.Windows.Forms.Button Btn_actualizar;
+        public System.Windows.Forms.DataGridView Dgv_mostrarProducto;
     }
 }
